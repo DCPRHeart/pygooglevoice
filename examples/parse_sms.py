@@ -5,7 +5,6 @@
 #   nagle@animats.com
 #
 from googlevoice import Voice
-import BeautifulSoup
 
 
 def extractsms(htmlsms):

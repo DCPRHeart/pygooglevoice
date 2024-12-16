@@ -8,8 +8,6 @@ from .conf import config
 from . import settings
 from . import util
 
-from six.moves import input
-
 import requests
 
 qpat = re.compile(r'\?')
@@ -133,12 +131,12 @@ class Voice(object):
 
         return content
 
-    def __oathtoolAuth(self, smsKey):
-        import commands
-        smsPin = commands.getstatusoutput('oathtool --totp ' + smsKey)[1]
-        content = self.__do_page('smsauth', {'smsUserPin': smsPin}).read()
-        del smsPin
-        return content
+    # def __oathtoolAuth(self, smsKey):
+    #     import commands
+    #     smsPin = commands.getstatusoutput('oathtool --totp ' + smsKey)[1]
+    #     content = self.__do_page('smsauth', {'smsUserPin': smsPin}).read()
+    #     del smsPin
+    #     return content
 
     def logout(self):
         """

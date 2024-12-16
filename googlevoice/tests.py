@@ -1,7 +1,6 @@
 import os
 from unittest import TestCase, main
 
-from six.moves import input
 
 from googlevoice import Voice
 from googlevoice import conf
